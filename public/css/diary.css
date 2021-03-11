@@ -1,0 +1,27 @@
+/* applies to anything of class "example-class-selector" */
+.example-class-selector {
+	margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+	/* Colors are in hexadecimal: http://www.colorpicker.com/ */	
+	color: #d4af37;
+}
+
+.center {
+  text-align: center;
+  /*border: 3px solid green;*/
+}
+
+h1, h2, h3, h4, h5 {
+	color: #800000;;
+}
+
+.log {
+	max-width:250px;
+}
+
+.img-rounded{
+	border-radius: 15%;
+}

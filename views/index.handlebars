@@ -1,8 +1,59 @@
 <html>
 <head>
-	<title>Test Page</title>
+	<title>Diary Log</title>
+	<meta charset="utf-8">
+
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/diary.js"></script>
+	<script src="js/camera.js"></script>
+
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/diary.css" rel="stylesheet">
+	<link href="css/introHCI.css" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-Begin here (or replace this with any static code already written).
+	<h1 class="text-center">Diary Log</h1>
+
+<div class="container">
+		<h2>My Past Entries</h2>
+
+		{{#each diaryLogs}}
+	      <div class="log">
+	        <img src="{{imageURL}}" class="img-responsive img-rounded"/>
+	        <a href="#" class="click-listener"><h3>{{entry}}</h3></a>
+	        <p>{{description}}</p>
+	        <hr>
+	      </div>
+    	{{/each}}
+
+	<form id="logDiaryEntry" role="form" method="get" action="/add">
+		<h3>How do you feel?</h3>
+	    <div class="form-group">
+	      <label for="entry">Entry Title:</label>
+	      <input type="text" class="form-control" id="entry" placeholder="Entry Title" name="entry">
+	    </div>
+	    <div class="form-group">
+	      <label for="description">Description:</label>
+	      <input type="text" class="form-control" id="description" placeholder="Description" name="description">
+	    </div>
+
+	   	<div class="col-6">
+          <div id="camera" class="profile" style="max-width: 250px;">
+            <video autoplay id="camera-video"></video>
+            <button id="camera-button" class="btn btn-primary">How I'm Feeling</button>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <canvas id="camera-canvas"></canvas>
+        </div>
+	    <input type="submit" id="submitBtn" class="btn btn-default" value="Log this entry"></input>
+	</form>
+</div>
+
 </body>
 </html>

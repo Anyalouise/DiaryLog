@@ -1,0 +1,14 @@
+{
+	"diaryLogs": [
+		{
+			"entry": "Example Entry",
+			"description": "Today, I am feeling happy, here is a photo of me where you can see my smile!",
+			"imageURL": "https://upload.wikimedia.org/wikipedia/commons/7/75/Very_happy_Tibetan_Buddhist_Monk.jpg"
+		},
+		{
+			"entry": "Example Entry #2",
+			"description": "Today, I am feeling sad, here is a photo of me where you can see my tears!",
+			"imageURL": "https://upload.wikimedia.org/wikipedia/commons/7/7d/S%C3%A9pulcre_Arc-en-Barrois_111008_12.jpg"
+		}
+	]
+}
